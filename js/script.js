@@ -338,7 +338,7 @@ $(document).ready(function() {
 	// 07. COUNTDOWN
 	//===================================================================================
 	var theday = new Date();
-	theday = new Date(2021, 3, 1);
+	theday = new Date(2021, 3, 1, 9, 30);
 	$('#countdown').countdown({until: theday, format: 'WDHMS'});
 	$('#countdown').countdown($.countdown.regionalOptions['custom-label']); 
 		 
@@ -501,24 +501,24 @@ $(document).ready(function() {
 	 
 	// MAGNIFIC AJAX
 	//==================================================================================
-	$('.magnific-ajax').magnificPopup({
-  		type: 'ajax',
-		ajax: {
-			settings: {cache:false} 
-			// Ajax settings object that will extend default one - http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings
-			// For example:
-			// settings: {cache:false, async:false}
-		},
-		callbacks: {
-    		open: function() {
-      			// Will fire when this exact popup is opened
-    		},
-    		afterClose: function() {
-      			// Will fire when popup is closed
+	// $('.magnific-ajax').magnificPopup({
+  	// 	type: 'ajax',
+	// 	ajax: {
+	// 		settings: {cache:false} 
+	// 		// Ajax settings object that will extend default one - http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings
+	// 		// For example:
+	// 		// settings: {cache:false, async:false}
+	// 	},
+	// 	callbacks: {
+    // 		open: function() {
+    //   			// Will fire when this exact popup is opened
+    // 		},
+    // 		afterClose: function() {
+    //   			// Will fire when popup is closed
 				
-    		}
-  		},
-	});		
+    // 		}
+  	// 	},
+	// });		
 	 
 	// 14. DISALBE TRANSITION (Mobile / Tablet)
 	//==================================================================================

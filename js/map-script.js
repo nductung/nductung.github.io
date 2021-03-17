@@ -13,10 +13,11 @@
 		
 		//DEFINE MAP OPTIONS
 		//=======================================================================================
+		const myLatlng = { lat: 19.955318432647193, lng: 105.46231269836426 };
   		var mapOptions = {
-    		zoom: 18,		
+    		zoom: 15,		
 			mapTypeId: google.maps.MapTypeId.ROADMAP,	
-    		center: new google.maps.LatLng(-12.046014, -77.030503),
+    		center: new google.maps.LatLng(myLatlng),
 			panControl: true,
   			zoomControl: true,
   			mapTypeControl: true,
@@ -54,7 +55,7 @@
 		//ADD NEW MARKER WITH LABEL
 		//=======================================================================================
 		var marker1 = new MarkerWithLabel({
-       		position: new google.maps.LatLng(-12.046014, -77.030503),
+       		position: new google.maps.LatLng(myLatlng),
        		draggable: false,
        		raiseOnDrag: false,
        		icon: ' ',
@@ -135,7 +136,7 @@
 		//INFO WINDOWS
 		//=======================================================================================
 		var contentString = '<div>'+
-		'WEDDING CEREMONY';
+		'GIA ĐÌNH NHÀ TRAI';
       	'</div>';
 		
 		var contentString1 = '<div>'+
