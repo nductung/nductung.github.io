@@ -11,7 +11,6 @@
             padding: 20px;
         }
         .loading {
-            display: none;
             font-size: 18px;
             color: blue;
         }
@@ -19,19 +18,14 @@
 </head>
 <body>
 
-    <h2>Gửi Request POST với Loading</h2>
-    <button onclick="sendPostRequest()">Gửi</button>
-    <p class="loading" id="loading">Đang gửi dữ liệu...</p>
+    <h2>Đang gửi request POST...</h2>
+    <p class="loading" id="loading">Vui lòng chờ...</p>
     <p id="response"></p>
 
     <script>
         function sendPostRequest() {
             const loadingElement = document.getElementById("loading");
             const responseElement = document.getElementById("response");
-
-            // Hiển thị loading
-            loadingElement.style.display = "block";
-            responseElement.innerHTML = "";
 
             // Dữ liệu giả lập gửi lên server
             const data = {
@@ -58,6 +52,9 @@
                 loadingElement.style.display = "none";
             });
         }
+
+        // Gọi hàm ngay khi trang tải xong
+        window.onload = sendPostRequest;
     </script>
 
 </body>
